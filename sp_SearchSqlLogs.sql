@@ -70,7 +70,7 @@ BEGIN
 		-- Check how many logs are available
 		DECLARE @LogList TABLE
 		( 
-							   LogNumber int, StartDate char(17), SizeInBytes int
+			LogNumber int, StartDate char(17), SizeInBytes int
 		);
 		INSERT INTO @LogList
 		EXEC xp_enumerrorlogs @LogType;
@@ -105,7 +105,7 @@ BEGIN
 			END;
 			CREATE TABLE #ErrorLogs1
 			( 
-						 LogDate datetime, ProcessInfo varchar(50), [Text] varchar(4000)
+				LogDate datetime, ProcessInfo varchar(50), [Text] varchar(4000)
 			);
 
 			WHILE @i <= @NumberOfLogs
@@ -132,7 +132,7 @@ BEGIN
 			END;
 			CREATE TABLE #ErrorLogs2
 			( 
-						 LogDate datetime, ProcessInfo varchar(50), [Text] varchar(4000)
+				LogDate datetime, ProcessInfo varchar(50), [Text] varchar(4000)
 			);
 
 			WHILE @i <= @NumberOfLogs
